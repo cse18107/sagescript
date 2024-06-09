@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Modal, Table, Button } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -28,7 +29,7 @@ export default function DashUsers() {
     if (currentUser.isAdmin) {
       fetchUsers();
     }
-  }, [currentUser._id]);
+  }, [currentUser?._id]);
 
   const handleShowMore = async () => {
     const startIndex = users.length;
