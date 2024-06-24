@@ -16,7 +16,7 @@ const SiteLogoName = ({imgH="2rem", imgW='2rem', fontSize='1.2rem'}) => {
       <img
         className={`rounded-lg`}
         style={{ height: `${imgH}`, width: `${imgW}` }}
-        src="/images/icon-2.png"
+        src="./images/icon-2.png"
       />
       Thoughtcanvas
     </Link>
