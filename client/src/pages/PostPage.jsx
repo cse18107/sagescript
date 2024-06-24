@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 // import CallToAction from "../components/CallToAction";
 import CommentSection from "../components/CommentSection";
 import PostCard from "../components/PostCard";
+import { categroies } from "../utils/helper";
 
 export default function PostPage() {
   const { postSlug } = useParams();
@@ -51,6 +52,12 @@ export default function PostPage() {
     }
   }, []);
 
+  const getCategory = (value) =>{
+    if(value==='uncategorized') return "Uncategorized";
+    const res = categroies.find((category) => category.key === value);
+    return res.value
+  }
+
   if (loading)
     return (
       <div className="flex justify-center items-center min-h-screen">
@@ -67,7 +74,7 @@ export default function PostPage() {
         className="self-center mt-5"
       >
         <Button color="gray" pill size="xs">
-          {post && post.category}
+          {post && getCategory(post.category)}
         </Button>
       </Link>
       <img

@@ -16,9 +16,9 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <div className="flex flex-col gap-6 p-28 px-3 max-w-[85rem] mx-auto ">
+      <div className="flex flex-col gap-6 p-28 px-3 max-w-[85rem] mx-auto bg-image">
         <h1 className="text-3xl font-bold lg:text-6xl kanit-semibold">
-          Welcome to Our Blog!
+          Welcome to Thoughtcanvas!
         </h1>
         <p className="text-gray-500 text-xs sm:text-sm kanit-semibold">
           Welcome to Thoughtcanvas, your go-to destination for insightful

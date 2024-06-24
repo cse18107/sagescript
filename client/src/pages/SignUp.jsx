@@ -39,15 +39,15 @@ export default function SignUp() {
     }
   };
   return (
-    <div className="min-h-screen mt-20">
-      <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
+    <div className="min-h-screen bg-image">
+      <div className="flex p-3 max-w-3xl mx-auto pt-[10rem] flex-col md:flex-row md:items-center gap-5">
         {/* left */}
         <div className="flex-1">
           <SiteLogoName imgH="2.8rem" imgW="2.8rem" fontSize="1.9rem" />
           <p className="text-sm mt-5">
-            Dive back into your creative space. Sign up to exploring,
-            writing, and connecting with fellow bloggers. You can sign up with
-            your email and password or with Google.
+            Dive back into your creative space. Sign up to exploring, writing,
+            and connecting with fellow bloggers. You can sign up with your email
+            and password or with Google.
           </p>
         </div>
         {/* right */}

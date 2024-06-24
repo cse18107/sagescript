@@ -53,8 +53,8 @@ export default function SignIn() {
     }
   };
   return (
-    <div className="min-h-screen mt-20">
-      <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
+    <div className="min-h-screen bg-image">
+      <div className="flex p-3 max-w-3xl mx-auto pt-[10rem] flex-col md:flex-row md:items-center gap-5">
         {/* left */}
         <div className="flex-1">
           <SiteLogoName imgH="2.8rem" imgW="2.8rem" fontSize="1.9rem" />
@@ -106,11 +106,13 @@ export default function SignIn() {
             {/* <span>Dont Have an account?</span> */}
             New to ThoughtCanvas?
             <span>
-              <Link to="/sign-up" className="text-blue-500 mr-[-4px] whitespace-nowrap">
+              <Link
+                to="/sign-up"
+                className="text-blue-500 mr-[-4px] whitespace-nowrap"
+              >
                 Join us now
               </Link>
             </span>
-            
           </div>
           {errorMessage && (
             <Alert className="mt-5" color="failure">

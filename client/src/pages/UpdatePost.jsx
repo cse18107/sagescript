@@ -13,6 +13,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { categroies } from "../utils/helper";
 
 export default function UpdatePost() {
   const [file, setFile] = useState(null);
@@ -142,9 +143,13 @@ console.warn(formData)
             value={formData.category}
           >
             <option value="uncategorized">Select a category</option>
-            <option value="javascript">JavaScript</option>
-            <option value="reactjs">React.js</option>
-            <option value="nextjs">Next.js</option>
+            {categroies.map((value, index) => {
+              return (
+                <option value={value.key} key={index}>
+                  {value.value}
+                </option>
+              );
+            })}
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">

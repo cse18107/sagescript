@@ -89,3 +89,10 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+.bg-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/sagescript-blog.appspot.com/o/1719246976359-web%2Bdevelopment%2Bbackground-min.jpg?alt=media&token=fc063490-8e4f-4160-8470-4fb89d810952');
+      background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+}

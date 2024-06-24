@@ -12,6 +12,7 @@ import { useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
+import { categroies } from "../utils/helper";
 
 export default function CreatePost() {
   const [file, setFile] = useState(null);
@@ -83,6 +84,7 @@ export default function CreatePost() {
       setPublishError("Something went wrong");
     }
   };
+  
   return (
     <div className="p-3 max-w-3xl mx-auto min-h-screen">
       <h1 className="text-center text-3xl my-7 font-semibold">Create a post</h1>
@@ -104,9 +106,15 @@ export default function CreatePost() {
             }
           >
             <option value="uncategorized">Select a category</option>
-            <option value="javascript">JavaScript</option>
-            <option value="reactjs">React.js</option>
-            <option value="nextjs">Next.js</option>
+            {categroies.map((value, index) => {
+              return (
+                <option value={value.key} key={index}>
+                  {value.value}
+                </option>
+              );
+            })}
+            {/* <option value="reactjs">React.js</option>
+            <option value="nextjs">Next.js</option> */}
           </Select>
         </div>
         <div className="flex gap-4 kanit-semibold items-center justify-between border-4 border-teal-500 border-dotted p-3">
