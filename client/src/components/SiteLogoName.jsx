@@ -16,7 +16,7 @@ const SiteLogoName = ({imgH="2rem", imgW='2rem', fontSize='1.2rem'}) => {
       <img
         className={`rounded-lg`}
         style={{ height: `${imgH}`, width: `${imgW}` }}
-        src="./images/icon-2.png"
+        src="https://firebasestorage.googleapis.com/v0/b/sagescript-blog.appspot.com/o/1719249087757-android-chrome-192x192.png?alt=media&token=4809e282-a09f-4e52-8f84-e9ab390a841b"
       />
       Thoughtcanvas
     </Link>
