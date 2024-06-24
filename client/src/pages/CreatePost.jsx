@@ -93,7 +93,7 @@ export default function CreatePost() {
             placeholder="Title"
             required
             id="title"
-            className="flex-1"
+            className="flex-1 kanit-semibold"
             onChange={(e) =>
               setFormData({ ...formData, title: e.target.value })
             }
@@ -109,7 +109,7 @@ export default function CreatePost() {
             <option value="nextjs">Next.js</option>
           </Select>
         </div>
-        <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">
+        <div className="flex gap-4 kanit-semibold items-center justify-between border-4 border-teal-500 border-dotted p-3">
           <FileInput
             type="file"
             accept="image/*"
@@ -135,7 +135,11 @@ export default function CreatePost() {
             )}
           </Button>
         </div>
-        {imageUploadError && <Alert color="failure">{imageUploadError}</Alert>}
+        {imageUploadError && (
+          <Alert color="failure" className="kanit-semibold">
+            {imageUploadError}
+          </Alert>
+        )}
         {formData.image && (
           <img
             src={formData.image}
@@ -146,17 +150,21 @@ export default function CreatePost() {
         <ReactQuill
           theme="snow"
           placeholder="Write something..."
-          className="h-72 mb-12"
+          className="h-72 mb-12 kanit-semibold"
           required
           onChange={(value) => {
             setFormData({ ...formData, content: value });
           }}
         />
-        <Button type="submit" gradientDuoTone="purpleToPink">
+        <Button
+          type="submit"
+          gradientDuoTone="purpleToPink"
+          className="kanit-semibold"
+        >
           Publish
         </Button>
         {publishError && (
-          <Alert className="mt-5" color="failure">
+          <Alert className="mt-5 kanit-semibold" color="failure">
             {publishError}
           </Alert>
         )}
